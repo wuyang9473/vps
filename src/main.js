@@ -723,12 +723,6 @@ function initDates() {
     const now = new Date();
     els.tradeDate.value = formatDate(now);
     syncDateDisplay(els.tradeDate);
-    if (els.dueDate.value) {
-        syncDateDisplay(els.dueDate);
-        return;
-    }
-    const targetDueDate = getNextBlackFriday(now);
-    els.dueDate.value = formatDate(targetDueDate);
     syncDateDisplay(els.dueDate);
 }
 
